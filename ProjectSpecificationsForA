@@ -1,0 +1,27 @@
+# Requirements for A
+## HTML & Pages
+    You must have at least 4 different HTML pages, each performing distinct functionality.
+    You can include as many extra pages as you wish — there is no limit.
+    Every page must be styled with custom CSS.
+    100% of your pages must get a perfect Lighthouse score for accessibility in Chrome (no exceptions).
+
+## Forms & Data
+    Your index.html must:
+    - Be a landing page.
+    - Contain a form that allows you to submit data to AWS.
+    - Contain a button that retrieves ALL database entries and displays them on the page.
+    - Include a way to delete entries.
+    You must also have a separate page (not index.html) with a form that submits data to AWS.
+    You must have a way to conditionally retrieve data and display it on a separate page — you can do this however you wish, but you cannot just return the entire database.
+    All forms must properly sanitize user input.
+
+## CSS & Styling
+    You must have at least 21 CSS styles (21+).
+    CSS should be distributed across pages (customized per page).
+
+## Testing & Coverage
+    You must have authored tests.
+    Your tests must provide at least 80% code coverage of all your front-end JavaScript.
+
+## Accessibility
+    All pages must achieve a perfect Lighthouse accessibility score (100%)
