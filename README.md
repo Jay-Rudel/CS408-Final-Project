@@ -50,9 +50,10 @@
 
 ## Project Wireframe
 
-TODO: Replace the wireframe below with you own design.
+    Below is the preview of my wireframe. It is more just for the first page then any of the others.
+    I have no idea yet, on what I will be doing for those files.
 
-![wireframe](wireframe-example.png)
+![wireframe](/img/wireframe-landingPage.png)
 
 
 ## Getting Started
