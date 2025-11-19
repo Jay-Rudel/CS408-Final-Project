@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/headersfootersdivs.css">
     <link rel="stylesheet" href="css/formpage.css">
+    <link rel="script" href="/js/main.js">
   </head>
 
   <body>
@@ -19,6 +20,13 @@
       </ul>
     </nav>
 
-    
+    <h3>Add New items to the Database</h3>
+    <h4>Template for adding new items to database from 11.2</h4>
+      <form id="itemForm">
+          <input id="newID" placeholder="ID" required /><br/>
+          <input id="newProduct" placeholder="Product Name" required/><br/>
+          <input id="newPrice" type="number" placeholder="Product Price" required/><br/>
+          <button type="submit">Add New Product</button>
+      </form>
   </body>
 </html>

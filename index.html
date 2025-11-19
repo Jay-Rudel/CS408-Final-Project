@@ -8,13 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/headersfootersdivs.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="script" href="/js/main.js">
 </head>
 
 <body>
-  <h1>HTML Rocks!</h1>
-  <img src="img/compile.jpeg">
-  <script type="module" src="js/main.js"></script>
-
   <nav>
     <ul>
       <li class="selectedPage"><a href="/index.html">Home - You are here</a></li>
@@ -23,6 +20,29 @@
       <li><a href="/pages/picturesTaken.html">Pictures Taken</a></li>
     </ul>
   </nav>
+
+  <h3>Template for the table from project 11.2</h3>
+  <table>
+      <thead>
+          <tr>
+              <th>Id</th><th>Name</th><th>Price</th><th>Actions</th>
+          </tr>
+      </thead>
+      <tbody id="TableData">
+          <tr>
+              <td colspan="4">ERROR: Missing Data</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <h3>Add New items to the Database</h3>
+    <h4>Template for adding new items to database from 11.2</h4>
+      <form id="itemForm">
+          <input id="newID" placeholder="ID" required /><br/>
+          <input id="newProduct" placeholder="Product Name" required/><br/>
+          <input id="newPrice" type="number" placeholder="Product Price" required/><br/>
+          <button type="submit">Add New Product</button>
+      </form>
 </body>
 
 </html>
