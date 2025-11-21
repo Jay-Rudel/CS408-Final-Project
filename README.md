@@ -1,6 +1,65 @@
 # CS408 - Web Dev - Final Project
 
-## Project Spec
+## Project 1 CheckPoint
+    All information for the Project one checkpoint will be found here
+
+    1. 
+        a) Below in the commits section will be all my github commits.
+
+        b) Commits lay out a lot of what I did for this project this week. I did a ton of work that I count as prepping. I worked on getting things added that I will use but haven't just yet.
+        
+        I still need to add CSS and the different pages and their functions.
+
+        c) I did not have any stumbling blocks that I encountered while working on this project this week. Which I think is a really good thing.
+
+        d) My plan for the next coming weeks is to work a ton on css for two different pages, Image page, and then the forum submiting page. Which would complete them and then work on the other pages.
+
+    2. At this current time I have no questions revolving my project nor my implementation because a lot of it is more of prep, than actual coding.
+
+    3. I don't have any ideas for tests at this current time. I will next time though.
+
+### Commits
+
+**c626d9e76069cceda6ff52efa5fa72d24506d7fa** - This commit is adding the nav bar into each of my files. Including stating what file you are in. NO CSS was used.
+
+**ce7dc9aff77f477276fbdd0491d72397cf529ccc** - This commit added seven photos into the file path img/top3/p1 for the project to use on all the pages of the project. I am unsure exact placements on images or if they will all be used (might remove later if an image is unused).
+
+**a785b0f874bca26d3d7ed053bc4855df2b78b2c8** - This commit added eleven images into the file path img/top3/p2 for the project to use on all the pages of the project. I am unsure exact placements on images or if they will all be used (might remove later if an image is unused).
+
+**519e28bce246ecb7cad5c63814a2fd859c243025** - Couple changes for this commit the first of which is adding the script into multiple places. (<link>) for index, formpage, and conditionalRetrieve. I then added the form template to both formpage and index. Then added the table to index as well. This is simply a template, because the code is exactly copied from my lab 11.2.
+
+**772e8dd6f18218523e582cccd1461dfae2b712b1** - For this commit I grabbed the script that I used for the 11.2 Lab. I added them to the JS file and will be making modifications to it in the coming week to test it.
+
+**8dff671a98e73b0661d9470f80122adefc736ef1** - This commit added eight images into the file path img/top3/p3 for the project to use on all the pages of the project. I am unsure exact placements on images or if they will all be used (might remove later if an image is unused).
+
+**219c2c10bf94061aacc8183e2b6d9e3fd6a779c2** - This commit adds a majority of of the needed content to match my wireframe. However, this does not include the formatting to do so. The formating for this project has yet to be touched
+
+**c26aec8b652c7116261f7a0ff9bd0150805778fe** - Fixing a few minor spelling things to make it so all class names that are set for individual html files are all capatilzed and ones for global CSS are undercase first then upper.
+
+**61c6342c73ec0a16289021c933a890eedc5c7793** - Started the CSS by adding all the custom classes that I have made so far. No actual CSS was implemented for them.
+
+**Final Readme Commit** - This commit documents exactly the changes that I made and all the comments etc for this checkpoint. We are also at this point so I don't have a commit number.
+
+## Getting Started
+    To get started, clone this repository, and then you can learn 
+    to view it in the "Viewing" section. Which is below.
+
+## Viewing
+    I highly recommend using VSCode Live Server extention to see the project. This allows you to
+    see the page, and interact with the page without having to open it in a local file.
+
+    The file that you will be looking at for this project in my github is called "index.html"
+
+## Testing
+    TODO:
+
+## Sources and Credits
+
+    TODO:
+
+## Initial Project Information
+
+### Spec
     For the overall idea of my project, I was thinking of doing a photography business. 
     Where you could come in see different photographers, and their different price rates. 
     The target audience is going to be the town, as well as like the people inside the town. 
@@ -45,30 +104,10 @@
     per photographer, and then also maybe an edit button on the form page 
     that I have started. I would love some other ideas though because, I 
     am not sure what else really I could do. 
-
- 
-
-## Project Wireframe
+    
+### Wireframe
 
     Below is the preview of my wireframe. It is more just for the first page then any of the others.
     I have no idea yet, on what I will be doing for those files.
 
 ![wireframe](/img/wireframe-landingPage.png)
-
-
-## Getting Started
-    To get started, clone this repository, and then you can learn 
-    to view it in the "Viewing" section. Which is below.
-
-## Viewing
-    I highly recommend using VSCode Live Server extention to see the project. This allows you to
-    see the page, and interact with the page without having to open it in a local file.
-
-    The file that you will be looking at for this project in my github is called "index.html"
-
-## Testing
-    TODO:
-
-## Sources and Credits
-
-    TODO:
