@@ -19,14 +19,35 @@
         <li><a href="/pages/picturesTaken.html">Pictures Taken</a></li>
       </ul>
     </nav>
+    
+    <div class="FormHolder">
+      <form id="customInformation">
+          <p>
+            What is your name?<br/>
+            <input id="CInewName" placeholder="Name" required/>
+          </p>
 
-    <h3>Add New items to the Database</h3>
-    <h4>Template for adding new items to database from 11.2</h4>
-      <form id="itemForm">
-          <input id="newID" placeholder="ID" required /><br/>
-          <input id="newProduct" placeholder="Product Name" required/><br/>
-          <input id="newPrice" type="number" placeholder="Product Price" required/><br/>
-          <button type="submit">Add New Product</button>
+          <p>
+            Contact Info?<br/>
+            <input id="CInewContactInfo" placeholder="Contact info" required/>
+          </p>
+
+          <p>
+            What is your speciality when you are taking pictures?<br/>
+            <input id="CInewSpeciality" placeholder="Speciality?" required/>
+          </p>
+
+          <p>
+            How many clients have you helped?<br/>
+            <input id="CInewCustomClientNum" placeholder="Clients?" type="number" required/>
+          </p>
+
+          <p> 
+            What is your hourly rate?<br/>
+            <input id="CInewPrice" type="number" placeholder="Hourly Rate" required/>
+          </p>
+          <button type="submit" onclick="">Apply Now!</button>
       </form>
+    </div>
   </body>
 </html>

@@ -57,3 +57,13 @@ function deleteItem(id) {
 
 // Very first load
 loadItems();
+
+
+
+function CustomDataSaveFromFormPage(e){
+    e.preventDefault(); //Prevents page reload
+
+
+
+    document.getElementById("customInformation").reset(); //resets the form
+}

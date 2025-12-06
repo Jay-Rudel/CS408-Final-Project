@@ -1,0 +1,24 @@
+form {
+  border: solid white 2px;
+  text-align: center;
+  margin: 1px;
+  border-radius: 8px;
+}
+
+p {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+button {
+    margin-bottom: 8px;
+}
+
+.FormHolder{
+    padding-top: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
