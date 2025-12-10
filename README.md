@@ -1,40 +1,5 @@
 # CS408 - Web Dev - Final Project
 
-## Project 2 CheckPoint
-    All information for the Project one checkpoint will be found here
-
-    1. 
-        a) Below in the commits section will be all my github commits.
-
-        b) I feel like I did a lot this week, and I think I did decent describing inside of the commits below. However, what I still need to do is hookup the database and finish the last two pages. Which will take me a bit of extra time.
-
-        c) The only stumbling block I had during this week, while I was working was getting the two pages I completed to be aligned in the middle like I wanted them too. I did get it though.
-
-        d) FFinish my last two pages, and then finish the backend hookup to the database. That I think will be the hardest and take me the longest.
-
-    2. At this current time I dont have any questions regarding my implementation that I would like others to answer. Thank you for looking at this though.
-
-    3. I don't have anything that others can test at this current time. The data wont be sent but if you want to try the forum page you can enter information inside there. Upon submit it will send data to the database when I finish the function.
-
-### Commits
-
-**a30eefbaaf0e675c7002d740a96c022e6fb6d08d** ~ [LINK](https://github.com/Jay-Rudel/CS408-Final-Project/commit/a30eefbaaf0e675c7002d740a96c022e6fb6d08d) - This commit fixes a small error inside of three of my html files. The error is in accordance to the head block and involves the filepath to the CSS files. I overlooked it when I copy pasted. 
-
-**5b8117108ca1a030e265bce9a9f7b120a1d808f8** ~ [LINK](https://github.com/Jay-Rudel/CS408-Final-Project/commit/5b8117108ca1a030e265bce9a9f7b120a1d808f8) - This commit addes the main style for all the pages, this includes the nav bar and then normal colors.
-
-**2eeefd81ce4da52c4eec775404e783a3f8463f84** ~ [LINK](https://github.com/Jay-Rudel/CS408-Final-Project/commit/2eeefd81ce4da52c4eec775404e783a3f8463f84) - This commit removes the compiling meme that was inside of the img folder.
-
-**bf9373e14522ebf0c4645b02785b2051e11445e0** ~ [LINK](https://github.com/Jay-Rudel/CS408-Final-Project/commit/bf9373e14522ebf0c4645b02785b2051e11445e0) - This commit adds a profile picture of mine, into the folder path of img/top3/p1, that is used on the picturesTaken page.
-
-**e3eb6865ff595d90d7b0db0258352337caf92e0f** ~ [LINK](https://github.com/Jay-Rudel/CS408-Final-Project/commit/e3eb6865ff595d90d7b0db0258352337caf92e0f) - My Formpage went through a ton of edits, and was completed. The CSS accompanying the page was also completed at the same time. The function that I called inside of the formpage was also started in the Java Script File.
-
-**248edda71ed7ea50155f05a7af776aebdc86503f** ~ [LINK](https://github.com/Jay-Rudel/CS408-Final-Project/commit/248edda71ed7ea50155f05a7af776aebdc86503f) - I completed the page the highlight of the top 3 performers, (pictureTaken.html). I also completed the CSS that goes along side that page (ImagePage.css). Both are now complete and will not be touched unless something major comes up that I want to change.
-
-**25d07e1e69b534121a844d38db6baeecfeff228e** ~ [LINK](https://github.com/Jay-Rudel/CS408-Final-Project/commit/25d07e1e69b534121a844d38db6baeecfeff228e) - Added some style to my table, and then also fixed the table's error of not enough rows, and added one extra item to the table. The table is almost done now. Also Changed the name of the forum to better know what forum I will be looking at in the future.
-
-**f20c14e1ab61179e22cbd8d90aba871b8c1a2689** ~ [LINK](https://github.com/Jay-Rudel/CS408-Final-Project/commit/f20c14e1ab61179e22cbd8d90aba871b8c1a2689) - Commit the readme to the project to grab all of the links instead of example.com. I also changed this commit message, to include the commit id, as well as the link to the commit.
-
-**Final Readme Commit** - This commit documents exactly the changes that I made and all the comments etc for this checkpoint. We are also at this point so I don't have a commit number for the readme.
 
 ## Getting Started
     To get started, clone this repository, and then you can learn 
@@ -147,3 +112,39 @@
 **61c6342c73ec0a16289021c933a890eedc5c7793** - Started the CSS by adding all the custom classes that I have made so far. No actual CSS was implemented for them.
 
 **Final Readme Commit** - This commit documents exactly the changes that I made and all the comments etc for this checkpoint. We are also at this point so I don't have a commit number.
+
+## Project 2 CheckPoint
+    All information for the Project one checkpoint will be found here
+
+    1. 
+        a) Below in the commits section will be all my github commits.
+
+        b) I feel like I did a lot this week, and I think I did decent describing inside of the commits below. However, what I still need to do is hookup the database and finish the last two pages. Which will take me a bit of extra time.
+
+        c) The only stumbling block I had during this week, while I was working was getting the two pages I completed to be aligned in the middle like I wanted them too. I did get it though.
+
+        d) FFinish my last two pages, and then finish the backend hookup to the database. That I think will be the hardest and take me the longest.
+
+    2. At this current time I dont have any questions regarding my implementation that I would like others to answer. Thank you for looking at this though.
+
+    3. I don't have anything that others can test at this current time. The data wont be sent but if you want to try the forum page you can enter information inside there. Upon submit it will send data to the database when I finish the function.
+
+### Commits
+
+**a30eefbaaf0e675c7002d740a96c022e6fb6d08d** ~ [LINK](https://github.com/Jay-Rudel/CS408-Final-Project/commit/a30eefbaaf0e675c7002d740a96c022e6fb6d08d) - This commit fixes a small error inside of three of my html files. The error is in accordance to the head block and involves the filepath to the CSS files. I overlooked it when I copy pasted. 
+
+**5b8117108ca1a030e265bce9a9f7b120a1d808f8** ~ [LINK](https://github.com/Jay-Rudel/CS408-Final-Project/commit/5b8117108ca1a030e265bce9a9f7b120a1d808f8) - This commit addes the main style for all the pages, this includes the nav bar and then normal colors.
+
+**2eeefd81ce4da52c4eec775404e783a3f8463f84** ~ [LINK](https://github.com/Jay-Rudel/CS408-Final-Project/commit/2eeefd81ce4da52c4eec775404e783a3f8463f84) - This commit removes the compiling meme that was inside of the img folder.
+
+**bf9373e14522ebf0c4645b02785b2051e11445e0** ~ [LINK](https://github.com/Jay-Rudel/CS408-Final-Project/commit/bf9373e14522ebf0c4645b02785b2051e11445e0) - This commit adds a profile picture of mine, into the folder path of img/top3/p1, that is used on the picturesTaken page.
+
+**e3eb6865ff595d90d7b0db0258352337caf92e0f** ~ [LINK](https://github.com/Jay-Rudel/CS408-Final-Project/commit/e3eb6865ff595d90d7b0db0258352337caf92e0f) - My Formpage went through a ton of edits, and was completed. The CSS accompanying the page was also completed at the same time. The function that I called inside of the formpage was also started in the Java Script File.
+
+**248edda71ed7ea50155f05a7af776aebdc86503f** ~ [LINK](https://github.com/Jay-Rudel/CS408-Final-Project/commit/248edda71ed7ea50155f05a7af776aebdc86503f) - I completed the page the highlight of the top 3 performers, (pictureTaken.html). I also completed the CSS that goes along side that page (ImagePage.css). Both are now complete and will not be touched unless something major comes up that I want to change.
+
+**25d07e1e69b534121a844d38db6baeecfeff228e** ~ [LINK](https://github.com/Jay-Rudel/CS408-Final-Project/commit/25d07e1e69b534121a844d38db6baeecfeff228e) - Added some style to my table, and then also fixed the table's error of not enough rows, and added one extra item to the table. The table is almost done now. Also Changed the name of the forum to better know what forum I will be looking at in the future.
+
+**f20c14e1ab61179e22cbd8d90aba871b8c1a2689** ~ [LINK](https://github.com/Jay-Rudel/CS408-Final-Project/commit/f20c14e1ab61179e22cbd8d90aba871b8c1a2689) - Commit the readme to the project to grab all of the links instead of example.com. I also changed this commit message, to include the commit id, as well as the link to the commit.
+
+**Final Readme Commit** - This commit documents exactly the changes that I made and all the comments etc for this checkpoint. We are also at this point so I don't have a commit number for the readme.
