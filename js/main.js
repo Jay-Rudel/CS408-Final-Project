@@ -11,7 +11,7 @@ function loadItems() {
 
             // Checking to see if there is data for us to display
             if (data.length === 0) {
-                table.innerHTML = '<tr><td colspan="4">There is no data to display</td></tr>';
+                table.innerHTML = '<tr><td colspan="6">There are no photographers to list</td></tr>';
                 return;
             }
 
@@ -19,14 +19,31 @@ function loadItems() {
 
             // Checking each item and then adding them to the table.
             data.forEach(item => {
-                const row = `<tr>
+                // if(item.id == Jay || item.id == Dee || item.id == Enid){
+                //     const row = `<tr>
+                //                     <td>${item.id}</td>
+                //                     <td>${item.contactInfo}</td>
+                //                     <td>${item.Speciality}</td>
+                //                     <td>${item.helped}</td>
+                //                     <td>${item.rate}</td>
+                //                     <td>Unable to Delete</td>
+                //                 </tr>`;
+                //     // Cant delete Those three.
+                // table.innerHTML += row;
+                // }
+                // else{
+                    const row = `<tr>
                                     <td>${item.id}</td>
-                                    <td>${item.name}</td>
-                                    <td>${item.price}</td>
+                                    <td>${item.contactInfo}</td>
+                                    <td>${item.Speciality}</td>
+                                    <td>${item.helped}</td>
+                                    <td>${item.rate}</td>
                                     <td><button class="btn" onclick="deleteItem('${item.id}')">Delete</button></td>
                                 </tr>`;
 
                 table.innerHTML += row;
+                // }
+                
             });
         }); // Cleaning all the closing brackets.
 }
