@@ -92,7 +92,7 @@ document.getElementById("customInformation").onsubmit = function (e) {
     });
 
     document.getElementById("customInformation").reset(); //resets the form
-}
+};
 
 // Very first load
 loadItems();
