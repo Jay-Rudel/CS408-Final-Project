@@ -1,5 +1,8 @@
 # CS408 - Web Dev - Final Project
 
+    This project is a personal website with a ton of photographers, 
+    that you can contact, so they can take pictures for you. This site
+    has multiple pages and a database that it pulls and enters information into.
 
 ## Getting Started
     To get started, clone this repository, and then you can learn 
@@ -15,8 +18,7 @@
     TODO:
 
 ## Sources and Credits
-
-    TODO:
+    No sources were used for this project.
 
 ## Initial Project Information
 
