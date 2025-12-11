@@ -25,47 +25,59 @@
   <h2>Let us worry about your photos, you worry about your day.</h2>
   <h2>Contact any of us below</h2>
 
-  <img>
-  <p>photo description</p>
-  <img class="PhotographerImg">
-    <p class="PhotographerName">Name:</p>
-    <p class="PhotographerSpeciality">Type of photos they take</p>
+  <article>
+    <section>
 
-    <hr> <!--Above will be in the first column | below will be a the different column-->
-    <h2 class="JoinTeam">Join the Team Today!</h2>
-    <p>We would love to have everyone join us. The application is easy! Apply below. Once you will find your name in the table below!</p>
+      <img>
+      <p>photo description</p>
+      <img class="PhotographerImg">
+      <p class="PhotographerName">Name:</p>
+      <p class="PhotographerSpeciality">Type of photos they take</p>
+    </section>
 
-    <div class="border">
-      <form id="simpleApply" class="mainForum">
-        <p>Your Name:</p>
+    <section>
+      <h2 class="JoinTeam">Join the Team Today!</h2>
+      <p>We would love to have everyone join us. The application is easy! Apply below. Once you will find your name in
+        the table below!</p>
+
+      <div class="border">
+        <form id="simpleApply" class="mainForum">
+          <p>Your Name:</p>
           <input id="newId" placeholder="Name" required>
-        <p>Contact Info:</p>
+          <p>Contact Info:</p>
           <input id="contactInfo" placeholder="Phone number, Email, Etc" required>
-        <p>Image Speciality:</p>  
-          <input id="speciality" placeholder="Outdoors, Events, etc."required>
-        <p>What is your hourly cost:</p>
+          <p>Image Speciality:</p>
+          <input id="speciality" placeholder="Outdoors, Events, etc." required>
+          <p>What is your hourly cost:</p>
           <input id="rate" placeholder="$10" required type="number"><br>
           <button type="submit">Apply Today!</button>
-      </form>
-    </div>
+        </form>
+      </div>
+    </section>
+  </article>
 
-    <div class="table">
-      <table>
-        <thead>
-            <tr>
-                <th>Name of Photographer</th><th>Contact Info</th><th>Speciality</th><th>Clients Helped</th><th>Hourly Rate</th><th>Delete Contact</th>
-            </tr>
-        </thead>
+  <div class="table">
+    <table>
+      <thead>
+        <tr>
+          <th>Name of Photographer</th>
+          <th>Contact Info</th>
+          <th>Speciality</th>
+          <th>Clients Helped</th>
+          <th>Hourly Rate</th>
+          <th>Delete Contact</th>
+        </tr>
+      </thead>
 
-        <tbody id="TableData">
-            <tr>
-                <td colspan="6">ERROR - Upon Recieving Data. Contact Site Management. </td>
-            </tr>
-        </tbody>
-      </table>
-    </div>
+      <tbody id="TableData">
+        <tr>
+          <td colspan="6">ERROR - Upon Recieving Data. Contact Site Management. </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-    <script src="/js/main.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 
 </html>
