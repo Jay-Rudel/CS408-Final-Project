@@ -35,16 +35,19 @@
     <h2 class="JoinTeam">Join the Team Today!</h2>
     <p>We would love to have everyone join us. The application is easy! Apply below. Once you will find your name in the table below!</p>
 
-    <forum id="simpleApply">
-      <p>Your Name:</p>
-        <input>
-      <p>Contact Info:</p>
-        <input>
-      <p>Image Speciality:</p>  
-        <input>
-      <p>What is your hourly cost:</p>
-        <input>
-    </forum>
+    <div class="border">
+      <form id="simpleApply" class="mainForum">
+        <p>Your Name:</p>
+          <input id="newId" placeholder="Name" required>
+        <p>Contact Info:</p>
+          <input id="contactInfo" placeholder="Phone number, Email, Etc" required>
+        <p>Image Speciality:</p>  
+          <input id="speciality" placeholder="Outdoors, Events, etc."required>
+        <p>What is your hourly cost:</p>
+          <input id="rate" placeholder="$10" required type="number"><br>
+          <button type="submit">Apply Today!</button>
+      </form>
+    </div>
 
     <div class="table">
       <table>
@@ -61,17 +64,6 @@
         </tbody>
       </table>
     </div>
-
-  <br><hr><br> <!--This is a seperator for my templates -->
-
-  <h3>Add New items to the Database</h3>
-    <h4>Template for adding new items to database from 11.2</h4>
-      <form id="itemForm">
-          <input id="newID" placeholder="ID" required /><br/>
-          <input id="newProduct" placeholder="Product Name" required/><br/>
-          <input id="newPrice" type="number" placeholder="Product Price" required/><br/>
-          <button type="submit">Add New Product</button>
-      </form>
 
     <script src="/js/main.js"></script>
 </body>

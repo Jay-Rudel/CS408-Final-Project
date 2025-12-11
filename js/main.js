@@ -6,7 +6,7 @@ function loadItems() {
     fetch(serverLocation)
         .then(res => res.json())
         .then(data => {
-
+            console.log("DATA FROM SERVER:", data);
             const table = document.getElementById("TableData");
 
             // Checking to see if there is data for us to display
@@ -23,7 +23,7 @@ function loadItems() {
                 //     const row = `<tr>
                 //                     <td>${item.id}</td>
                 //                     <td>${item.contactInfo}</td>
-                //                     <td>${item.Speciality}</td>
+                //                     <td>${item.speciality}</td>
                 //                     <td>${item.helped}</td>
                 //                     <td>${item.rate}</td>
                 //                     <td>Unable to Delete</td>
@@ -35,7 +35,7 @@ function loadItems() {
                     const row = `<tr>
                                     <td>${item.id}</td>
                                     <td>${item.contactInfo}</td>
-                                    <td>${item.Speciality}</td>
+                                    <td>${item.speciality}</td>
                                     <td>${item.helped}</td>
                                     <td>${item.rate}</td>
                                     <td><button class="btn" onclick="deleteItem('${item.id}')">Delete</button></td>
@@ -48,23 +48,26 @@ function loadItems() {
         }); // Cleaning all the closing brackets.
 }
 
+
 // The following is how a new item is added to the table;
-document.getElementById("itemForm").onsubmit = function (e) {
+document.getElementById("simpleApply").onsubmit = function (e) {
     e.preventDefault();
 
-    // The three values that we want to add to the database
-    const id = document.getElementById("newID").value;
-    const name = document.getElementById("newProduct").value;
-    const price = Number(document.getElementById("newPrice").value);
+    // the values that want to be added
+    const id = document.getElementById("newId").value;
+    const contactInfo = document.getElementById("contactInfo").value;
+    const speciality= document.getElementById("speciality").value;
+    const helped = 0;
+    const rate = document.getElementById("rate").value;
 
     // Connecting and putting them into the database
     fetch(serverLocation, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id, name, price })
+        body: JSON.stringify({ id, contactInfo, speciality, helped, rate })
     }).then(() => loadItems());
 
-    document.getElementById("itemForm").reset();
+    document.getElementById("simpleApply").reset();
 };
 
 // The following function is used to delete a new item
