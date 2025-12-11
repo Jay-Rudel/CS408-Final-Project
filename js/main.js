@@ -86,7 +86,14 @@ loadItems();
 function CustomDataSaveFromFormPage(e){
     e.preventDefault(); //Prevents page reload
 
+    //idk the values yet
+    const id = 0;
+    const contactInfo = 0;
+    const speciality= 0;
+    const helped = 0;
+    const rate = 0;
 
+    createEntry(id, contactInfo, speciality, helped, rate);
 
     document.getElementById("customInformation").reset(); //resets the form
 }
