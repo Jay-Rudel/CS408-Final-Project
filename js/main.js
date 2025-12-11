@@ -19,7 +19,7 @@ function loadItems() {
 
             // Checking each item and then adding them to the table.
             data.forEach(item => {
-                // if(item.id == Jay || item.id == Dee || item.id == Enid){
+                // if(item.id == "Jay" || item.id == "Dee" || item.id == "Enid"){
                 //     const row = `<tr>
                 //                     <td>${item.id}</td>
                 //                     <td>${item.contactInfo}</td>
@@ -28,7 +28,7 @@ function loadItems() {
                 //                     <td>${item.rate}</td>
                 //                     <td>Unable to Delete</td>
                 //                 </tr>`;
-                //     // Cant delete Those three.
+                //     // Cant delete These three.
                 // table.innerHTML += row;
                 // }
                 // else{
