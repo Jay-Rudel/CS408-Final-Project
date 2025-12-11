@@ -33,3 +33,12 @@ td{
   border-collapse: collapse;
   padding: 6px;
 }
+
+.mainForum {
+  text-align: center;
+}
+
+.mainForum button{
+  width:100%;
+  margin-top: 6px;
+}

@@ -42,10 +42,8 @@ body {
     padding: .75em;
 }
 
-ul {
-
-}
-
-li {
-
+.border{
+    border: white 2px solid;
+    width:fit-content;
+    padding: 5px;
 }
