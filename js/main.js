@@ -60,12 +60,7 @@ document.getElementById("simpleApply").onsubmit = function (e) {
     const helped = 0;
     const rate = document.getElementById("rate").value;
 
-    // Connecting and putting them into the database
-    fetch(serverLocation, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id, contactInfo, speciality, helped, rate })
-    }).then(() => loadItems());
+    createEntry(id, contactInfo, speciality, helped, rate);
 
     document.getElementById("simpleApply").reset();
 };
@@ -75,10 +70,18 @@ function deleteItem(id) {
     fetch(`${serverLocation}/${id}`, { method: "DELETE" }).then(() => loadItems());
 }
 
+function createEntry(id, contactInfo, speciality, helped, rate){
+    // Connecting and putting them into the database
+    fetch(serverLocation, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id, contactInfo, speciality, helped, rate })
+    }).then(() => loadItems());
+}
+
+
 // Very first load
 loadItems();
-
-
 
 function CustomDataSaveFromFormPage(e){
     e.preventDefault(); //Prevents page reload
