@@ -60,7 +60,12 @@ document.getElementById("simpleApply").onsubmit = function (e) {
     const helped = 0;
     const rate = document.getElementById("rate").value;
 
-    createEntry(id, contactInfo, speciality, helped, rate);
+    // Connecting and putting them into the database
+    fetch(serverLocation, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id, contactInfo, speciality, helped, rate })
+    }).then(() => loadItems());
 
     document.getElementById("simpleApply").reset();
 };
@@ -70,30 +75,24 @@ function deleteItem(id) {
     fetch(`${serverLocation}/${id}`, { method: "DELETE" }).then(() => loadItems());
 }
 
-function createEntry(id, contactInfo, speciality, helped, rate){
+document.getElementById("customInformation").onsubmit = function (e) {
+    e.preventDefault(); //Prevents page reload
+
+    const id = document.getElementById("CInewName").value;
+    const contactInfo = document.getElementById("CInewContactInfo").value;
+    const speciality= document.getElementById("CInewSpeciality").value;
+    const helped = document.getElementById("CInewCustomClientNum").value;
+    const rate = document.getElementById("CInewPrice").value;
+
     // Connecting and putting them into the database
     fetch(serverLocation, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id, contactInfo, speciality, helped, rate })
-    }).then(() => loadItems());
-}
-
-
-// Very first load
-loadItems();
-
-function CustomDataSaveFromFormPage(e){
-    e.preventDefault(); //Prevents page reload
-
-    //idk the values yet
-    const id = 0;
-    const contactInfo = 0;
-    const speciality= 0;
-    const helped = 0;
-    const rate = 0;
-
-    createEntry(id, contactInfo, speciality, helped, rate);
+    });
 
     document.getElementById("customInformation").reset(); //resets the form
 }
+
+// Very first load
+loadItems();
