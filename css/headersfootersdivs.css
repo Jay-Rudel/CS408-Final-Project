@@ -45,7 +45,8 @@ body {
 .border{
     border: white 2px solid;
     width:fit-content;
-    padding: 5px;
+    padding: 7px;
+    border-radius:10px;
 }
 
 /* Next section is all table information */

@@ -24,18 +24,18 @@
     One thing to search for is by clients Greater than a number
     One thing to search for is under a certain budget-->
 
-    <div class="table">
+    <div class="middlePage">
+    <div class="border">
     <form>
-
-      <p>Client Name</p>
-      <input>
-      <input type="number">
-      <input type="number">
+      <p>In the following you can search our database of photographers. You can include any of the following information before hitting "Search the Table". If no information is provided it will return the entire table.</p>
+      <p class="formP"><label>Name:</label><input id="serName" placeholder="Their Name"></p>
+      <p class="formP"><label>Budget:</label><input type="number" id="serBudget" placeholder="Your Budget"></p><!--We wil be looking to see if the the price of a photographer is equal or less than their budget-->
+      <p class="formP"><label>Number:</label><input type="number" id="serClients" placeholder="Clients they have had"></p><!-- We will be looking to see if they have had this many or more clients -->
 
       <button onclick="SearchTable()" type="submit">Search the Table</button>
     </form>
     
-    
+    <div class="table">
     <table>
       <thead>
         <tr>
@@ -44,15 +44,16 @@
           <th>Speciality</th>
           <th>Clients Helped</th>
           <th>Hourly Rate</th>
-          <th>Delete Contact</th>
         </tr>
       </thead>
 
       <tbody id="SearchTableData">
         <tr>
-          <td colspan="6">ERROR - No one matches search requirement </td>
+          <td colspan="5">ERROR - No one matches search requirement </td>
         </tr>
       </tbody>
     </table>
+  </div>
+  </div>
   </div>
 </html>
