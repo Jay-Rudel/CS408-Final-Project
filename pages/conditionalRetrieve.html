@@ -20,6 +20,39 @@
       </ul>
     </nav>
 
+    <!--One thing to search for is by name
+    One thing to search for is by clients Greater than a number
+    One thing to search for is under a certain budget-->
+
+    <div class="table">
+    <form>
+
+      <p>Client Name</p>
+      <input>
+      <input type="number">
+      <input type="number">
+
+      <button onclick="SearchTable()" type="submit">Search the Table</button>
+    </form>
     
-  </body>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Name of Photographer</th>
+          <th>Contact Info</th>
+          <th>Speciality</th>
+          <th>Clients Helped</th>
+          <th>Hourly Rate</th>
+          <th>Delete Contact</th>
+        </tr>
+      </thead>
+
+      <tbody id="SearchTableData">
+        <tr>
+          <td colspan="6">ERROR - No one matches search requirement </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </html>
