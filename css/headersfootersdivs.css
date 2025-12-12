@@ -47,3 +47,23 @@ body {
     width:fit-content;
     padding: 5px;
 }
+
+/* Next section is all table information */
+.table {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+table {
+  border: solid white 1px;
+  text-align: center;
+  padding: 1px;
+}
+
+td{
+  min-width: 65px;
+  border: solid white 1px;;
+  border-collapse: collapse;
+  padding: 6px;
+}
