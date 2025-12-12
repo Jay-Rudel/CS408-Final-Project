@@ -49,15 +49,20 @@ function loadItems() {
 }
 
 
-// The following is how a new item is added to the table;
-document.getElementById("simpleApply").onsubmit = function (e) {
+document.getElementById("formApply").onsubmit = function (e) {
     e.preventDefault();
+
+    const rateCheck = document.getElementById("helped");
 
     // the values that want to be added
     const id = document.getElementById("newId").value;
     const contactInfo = document.getElementById("contactInfo").value;
-    const speciality= document.getElementById("speciality").value;
-    const helped = 0;
+    const speciality = document.getElementById("speciality").value;
+    let helped = 0;
+    if(rateCheck){
+        helped = document.getElementById("helped").value;
+    }
+
     const rate = document.getElementById("rate").value;
 
     // Connecting and putting them into the database
@@ -67,32 +72,13 @@ document.getElementById("simpleApply").onsubmit = function (e) {
         body: JSON.stringify({ id, contactInfo, speciality, helped, rate })
     }).then(() => loadItems());
 
-    document.getElementById("simpleApply").reset();
+    document.getElementById("formApply").reset();
 };
 
 // The following function is used to delete a new item
 function deleteItem(id) {
     fetch(`${serverLocation}/${id}`, { method: "DELETE" }).then(() => loadItems());
 }
-
-document.getElementById("customInformation").onsubmit = function (e) {
-    e.preventDefault(); //Prevents page reload
-
-    const id = document.getElementById("CInewName").value;
-    const contactInfo = document.getElementById("CInewContactInfo").value;
-    const speciality= document.getElementById("CInewSpeciality").value;
-    const helped = document.getElementById("CInewCustomClientNum").value;
-    const rate = document.getElementById("CInewPrice").value;
-
-    // Connecting and putting them into the database
-    fetch(serverLocation, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id, contactInfo, speciality, helped, rate })
-    });
-
-    document.getElementById("customInformation").reset(); //resets the form
-};
 
 // Very first load
 loadItems();
