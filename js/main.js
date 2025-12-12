@@ -48,7 +48,6 @@ function loadItems() {
         }); // Cleaning all the closing brackets.
 }
 
-
 document.getElementById("formApply").onsubmit = function (e) {
     e.preventDefault();
 
