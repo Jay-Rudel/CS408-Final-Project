@@ -54,32 +54,52 @@ document.getElementById("formSubmit").onsubmit = function (e) {
     fetch(serverLocation)
         .then(res => res.json())
         .then(data => {
-            console.log("DATA FROM SERVER:", data);
             const table = document.getElementById("SearchTableData");
 
-            const nameVal = document.getElementByI("serName").value;
-            const budgetVal = document.getElementById("serBudget").value;
-            const helpedVal = document.getElementById("serClients").value
-            // Checking to see if there is data for us to display
-            if (data.length === 0) {
-                table.innerHTML = '<tr><td colspan="5">No one in table.</td></tr>';
-                return;
-            }
+            const nameInput = document.getElementById("serName").value.trim().toLowerCase();
+            const budgetInput = document.getElementById("serBudget").value;
+            const helpedInput = document.getElementById("serClients").value;
+
+            const budget = budgetInput ? Number(budgetInput) : null;
+            const helped = helpedInput ? Number(helpedInput) : null;
 
             table.innerHTML = "";
 
             data.forEach(item => {
-                const row = `<tr>
-                                    <td>${item.id}</td>
-                                    <td>${item.contactInfo}</td>
-                                    <td>${item.speciality}</td>
-                                    <td>${item.helped}</td>
-                                    <td>${item.rate}</td>
-                                </tr>`;
+                let match = true;
 
-                table.innerHTML += row;
-        });}); // Clean up :)
-}
+                // name filter
+                if (nameInput && item.id.toLowerCase() !== nameInput) {
+                    match = false;
+                }
+
+                // budget filter
+                if (budget !== null && item.rate > budget) {
+                    match = false;
+                }
+
+                // helped filter
+                if (helped !== null && item.helped < helped) {
+                    match = false;
+                }
+
+                if (match) {
+                    table.innerHTML += `
+                        <tr>
+                            <td>${item.id}</td>
+                            <td>${item.contactInfo}</td>
+                            <td>${item.speciality}</td>
+                            <td>${item.helped}</td>
+                            <td>${item.rate}</td>
+                        </tr>`;
+                }
+            });
+
+            if (!table.innerHTML) {
+                table.innerHTML = `<tr><td colspan="5">No matches found.</td></tr>`;
+            }
+        });
+};
 
 document.getElementById("formApply").onsubmit = function (e) {
     e.preventDefault();
