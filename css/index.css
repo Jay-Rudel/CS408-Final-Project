@@ -40,3 +40,14 @@ article section {
 div{
   padding-top: 10px;
 }
+
+.table {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  width: 150px;
+  padding: 3px;
+}
