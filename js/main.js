@@ -19,7 +19,7 @@ function loadItems() {
 
             // Checking each item and then adding them to the table.
             data.forEach(item => {
-                if(item.id === "Jay" || item.id === "Dee" || item.id === "Enid"){
+                if (item.id === "Jay" || item.id === "Dee" || item.id === "Enid") {
                     const row = `<tr>
                                     <td>${item.id}</td>
                                     <td>${item.contactInfo}</td>
@@ -29,9 +29,9 @@ function loadItems() {
                                     <td>Unable to Delete</td>
                                 </tr>`;
                     // Cant delete These three.
-                table.innerHTML += row;
+                    table.innerHTML += row;
                 }
-                else{
+                else {
                     const row = `<tr>
                                     <td>${item.id}</td>
                                     <td>${item.contactInfo}</td>
@@ -41,50 +41,51 @@ function loadItems() {
                                     <td><button class="btn" onclick="deleteItem('${item.id}')">Delete</button></td>
                                 </tr>`;
 
-                table.innerHTML += row;
+                    table.innerHTML += row;
                 }
-                
             });
         }); // Cleaning all the closing brackets.
-}
+};
 
-document.getElementById("formSubmit").onsubmit = function (e) {
-    e.preventDefault();
+const searchForm = document.getElementById("formSubmit");
+if (searchForm) {
+    document.getElementById("formSubmit").onsubmit = function (e) {
+        e.preventDefault();
 
-    fetch(serverLocation)
-        .then(res => res.json())
-        .then(data => {
-            const table = document.getElementById("SearchTableData");
+        fetch(serverLocation)
+            .then(res => res.json())
+            .then(data => {
+                const table = document.getElementById("SearchTableData");
 
-            const nameInput = document.getElementById("serName").value.trim().toLowerCase();
-            const budgetInput = document.getElementById("serBudget").value;
-            const helpedInput = document.getElementById("serClients").value;
+                const nameInput = document.getElementById("serName").value.trim().toLowerCase();
+                const budgetInput = document.getElementById("serBudget").value;
+                const helpedInput = document.getElementById("serClients").value;
 
-            const budget = budgetInput ? Number(budgetInput) : null;
-            const helped = helpedInput ? Number(helpedInput) : null;
+                const budget = budgetInput ? Number(budgetInput) : null;
+                const helped = helpedInput ? Number(helpedInput) : null;
 
-            table.innerHTML = "";
+                table.innerHTML = "";
 
-            data.forEach(item => {
-                let match = true;
+                data.forEach(item => {
+                    let match = true;
 
-                // name filter
-                if (nameInput && item.id.toLowerCase() !== nameInput) {
-                    match = false;
-                }
+                    // name filter
+                    if (nameInput && item.id.toLowerCase() !== nameInput) {
+                        match = false;
+                    }
 
-                // budget filter
-                if (budget !== null && item.rate > budget) {
-                    match = false;
-                }
+                    // budget filter
+                    if (budget !== null && item.rate > budget) {
+                        match = false;
+                    }
 
-                // helped filter
-                if (helped !== null && item.helped < helped) {
-                    match = false;
-                }
+                    // helped filter
+                    if (helped !== null && item.helped < helped) {
+                        match = false;
+                    }
 
-                if (match) {
-                    table.innerHTML += `
+                    if (match) {
+                        table.innerHTML += `
                         <tr>
                             <td>${item.id}</td>
                             <td>${item.contactInfo}</td>
@@ -92,40 +93,44 @@ document.getElementById("formSubmit").onsubmit = function (e) {
                             <td>${item.helped}</td>
                             <td>${item.rate}</td>
                         </tr>`;
+                    }
+                });
+
+                if (!table.innerHTML) {
+                    table.innerHTML = `<tr><td colspan="5">No matches found.</td></tr>`;
                 }
             });
+    };
+}
 
-            if (!table.innerHTML) {
-                table.innerHTML = `<tr><td colspan="5">No matches found.</td></tr>`;
-            }
-        });
-};
+const mainApply = document.getElementById("formApply");
+if (mainApply) {
+    document.getElementById("formApply").onsubmit = function (e) {
+        e.preventDefault();
 
-document.getElementById("formApply").onsubmit = function (e) {
-    e.preventDefault();
+        const helpCheck = document.getElementById("helped");
 
-    const helpCheck = document.getElementById("helped");
+        // the values that want to be added
+        const id = document.getElementById("newId").value;
+        const contactInfo = document.getElementById("contactInfo").value;
+        const speciality = document.getElementById("speciality").value;
+        let helped = 0;
+        if (helpCheck) {
+            helped = document.getElementById("helped").value;
+        }
 
-    // the values that want to be added
-    const id = document.getElementById("newId").value;
-    const contactInfo = document.getElementById("contactInfo").value;
-    const speciality = document.getElementById("speciality").value;
-    let helped = 0;
-    if(helpCheck){
-        helped = document.getElementById("helped").value;
-    }
+        const rate = document.getElementById("rate").value;
 
-    const rate = document.getElementById("rate").value;
+        // Connecting and putting them into the database
+        fetch(serverLocation, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ id, contactInfo, speciality, helped, rate })
+        }).then(() => loadItems());
 
-    // Connecting and putting them into the database
-    fetch(serverLocation, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id, contactInfo, speciality, helped, rate })
-    }).then(() => loadItems());
-
-    document.getElementById("formApply").reset();
-};
+        document.getElementById("formApply").reset();
+    };
+}
 
 // The following function is used to delete a new item
 function deleteItem(id) {
