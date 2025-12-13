@@ -8,7 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/headersfootersdivs.css">
   <link rel="stylesheet" href="css/index.css">
-  <link rel="script" href="/js/main.js">
 </head>
 
 <body>
@@ -20,68 +19,78 @@
       <li><a href="/pages/picturesTaken.html">Pictures Taken</a></li>
     </ul>
   </nav>
+
   <div class="middlePage">
-  <div class="border">
-  <h1>Stress Free Photo Takers!</h1>
-  <h2>Let us worry about your photos, you worry about your day.</h2>
-  <h2>Contact any of us below</h2>
-
-  <div class="border">
-  <article>
-
-    <section>
-      <img src="img/top3/p1/GrandPrismaticSpring.jpg" alt="The grand prismatic spring in yellowstone national park." class="mainImage">
-      <p>This image was taken from a phone. While inside of Yellowstone National Park. "I was visiting Yellowstone National Park. While there our family visited the Grand Prismatic Springs. It was amazing."</p>
-      <img class="PhotographerImg" src="img/top3/p1/jay-pfp.jpg"> <!-- This is my own image. I am giving myself permission to use it. -->
-      <p class="PhotographerName">Photographer: Jay Rudel</p>
-      <p class="PhotographerSpeciality">This is Jay, he likes to travel and take pictures of the outdoors. He doesn't have a "base of operation" because he is traveling so much. If you want to see if he will be in a city or town near you Email him today!</p>
-    </section>
-
-    <section class="middlePage">
-      <h2>Join the Team Today!</h2>
-      <p>We would love to have everyone join us. The application is easy! Apply below. Once you will find your name in
-        the table below!</p>
+    <div class="border">
+      <h1>Stress Free Photo Takers!</h1>
+      <h2>Let us worry about your photos, you worry about your day.</h2>
+      <h2>Contact any of us below</h2>
 
       <div class="border">
-        <form id="formApply" class="mainForum">
-          <p>Your Name:</p>
-          <input id="newId" placeholder="Name" required>
-          <p>Contact Info:</p>
-          <input id="contactInfo" placeholder="Phone number, Email, Etc" required>
-          <p>Image Speciality:</p>
-          <input id="speciality" placeholder="Outdoors, Events, etc." required>
-          <p>What is your hourly cost:</p>
-          <input id="rate" placeholder="$10" required type="number"><br>
-          <button type="submit">Apply Today!</button>
-        </form>
+        <article>
+
+          <section>
+            <img src="img/top3/p1/GrandPrismaticSpring.jpg"
+              alt="The grand prismatic spring in yellowstone national park." class="mainImage">
+            <p>This image was taken from a phone. While inside of Yellowstone National Park. "I was visiting Yellowstone
+              National Park. While there our family visited the Grand Prismatic Springs. It was amazing."</p>
+            <img class="PhotographerImg" src="img/top3/p1/jay-pfp.jpg">
+            <!-- This is my own image. I am giving myself permission to use it. -->
+            <p class="PhotographerName">Photographer: Jay Rudel</p>
+            <p class="PhotographerSpeciality">This is Jay, he likes to travel and take pictures of the outdoors. He
+              doesn't have a "base of operation" because he is traveling so much. If you want to see if he will be in a
+              city or town near you Email him today!</p>
+          </section>
+
+          <section class="middlePage">
+            <h2>Join the Team Today!</h2>
+            <p>We would love to have everyone join us. The application is easy! Apply below. Once you will find your
+              name in
+              the table below!</p>
+
+            <div class="border">
+              <form id="formApply" class="mainForum">
+                <p>Your Name:</p>
+                <input id="newId" placeholder="Name" required>
+                <p>Contact Info:</p>
+                <input id="contactInfo" placeholder="Phone number, Email, Etc" required>
+                <p>Image Speciality:</p>
+                <input id="speciality" placeholder="Outdoors, Events, etc." required>
+                <p>What is your hourly cost:</p>
+                <input id="rate" placeholder="$10" required type="number"><br>
+                <button type="submit">Apply Today!</button>
+              </form>
+            </div>
+          </section>
+        </article>
       </div>
-    </section>
-  </article>
-</div>
 
-  <div class="table">
-    <button onclick="loadItems()">refresh</button>
-    <table>
-      <thead>
-        <tr>
-          <th>Name of Photographer</th>
-          <th>Contact Info</th>
-          <th>Speciality</th>
-          <th>Clients Helped</th>
-          <th>Hourly Rate</th>
-          <th>Delete Contact</th>
-        </tr>
-      </thead>
+      <div class="table">
+        <button onclick="loadItems()">Refresh Table</button>
 
-      <tbody id="TableData">
-        <tr>
-          <td colspan="6">ERROR - Upon Recieving Data. Contact Site Management. </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Name of Photographer</th>
+              <th>Contact Info</th>
+              <th>Speciality</th>
+              <th>Clients Helped</th>
+              <th>Hourly Rate</th>
+              <th>Delete Contact</th>
+            </tr>
+          </thead>
+
+          <tbody id="TableData">
+            <tr>
+              <td colspan="6">ERROR - Upon Recieving Data. Contact Site Management. </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 
   <script src="/js/main.js"></script>
 </body>
+
 </html>
