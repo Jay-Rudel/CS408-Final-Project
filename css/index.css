@@ -14,6 +14,21 @@
 
 }
 
+article {
+  display: flex;
+  gap: 20px;
+  border-radius: 15px;
+  padding: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+article section {
+  flex: 1;
+  border: solid white 2px;
+  border-radius: 15px;
+  padding: 5px;
+}
 
 .mainForum {
   text-align: center;
@@ -22,4 +37,8 @@
 .mainForum button{
   width:100%;
   margin-top: 6px;
+}
+
+div{
+  padding-top: 10px;
 }

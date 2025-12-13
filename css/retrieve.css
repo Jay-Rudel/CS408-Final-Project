@@ -1,13 +1,3 @@
-.middlePage{
-    padding-top: 5px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-}
-
 p {
     padding-left: 12px;
     padding-right: 12px;
