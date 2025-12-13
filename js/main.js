@@ -48,17 +48,50 @@ function loadItems() {
         }); // Cleaning all the closing brackets.
 }
 
+document.getElementById("formSubmit").onsubmit = function (e) {
+    e.preventDefault();
+
+    fetch(serverLocation)
+        .then(res => res.json())
+        .then(data => {
+            console.log("DATA FROM SERVER:", data);
+            const table = document.getElementById("SearchTableData");
+
+            const nameVal = document.getElementByI("serName").value;
+            const budgetVal = document.getElementById("serBudget").value;
+            const helpedVal = document.getElementById("serClients").value
+            // Checking to see if there is data for us to display
+            if (data.length === 0) {
+                table.innerHTML = '<tr><td colspan="5">No one in table.</td></tr>';
+                return;
+            }
+
+            table.innerHTML = "";
+
+            data.forEach(item => {
+                const row = `<tr>
+                                    <td>${item.id}</td>
+                                    <td>${item.contactInfo}</td>
+                                    <td>${item.speciality}</td>
+                                    <td>${item.helped}</td>
+                                    <td>${item.rate}</td>
+                                </tr>`;
+
+                table.innerHTML += row;
+        });}); // Clean up :)
+}
+
 document.getElementById("formApply").onsubmit = function (e) {
     e.preventDefault();
 
-    const rateCheck = document.getElementById("helped");
+    const helpCheck = document.getElementById("helped");
 
     // the values that want to be added
     const id = document.getElementById("newId").value;
     const contactInfo = document.getElementById("contactInfo").value;
     const speciality = document.getElementById("speciality").value;
     let helped = 0;
-    if(rateCheck){
+    if(helpCheck){
         helped = document.getElementById("helped").value;
     }
 
