@@ -1,17 +1,15 @@
 .PhotographerImg{
-
+  width: 65px;
+  height: auto;
+  border-radius: 8px;
 }
 
-.PhotographerName {
-
-}
-
-.PhotographerSpeciality {
-
-}
-
-.JoinTeam{
-
+.mainImage{
+  width: 850px;
+  height: auto;  
+  border-radius: 20px;
+  border: white 2px solid;
+  margin-top: 4px;
 }
 
 article {
