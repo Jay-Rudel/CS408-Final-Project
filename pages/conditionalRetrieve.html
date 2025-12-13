@@ -1,59 +1,64 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>What would you like to retrieve in the database</title>
-    <meta name="description" content="Sets up a custom form retrieval page.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/headersfootersdivs.css">
-    <link rel="stylesheet" href="/css/retrieve.css">
-    <link rel="script" href="/js/main.js">
-  </head>
 
-  <body>
-    <nav>
-      <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li class="selectedPage"><a href="/pages/conditionalRetrieve.html">Search Photographers - You are here</a></li>
-        <li><a href="/pages/formpage.html">Join the Team</a></li>
-        <li><a href="/pages/picturesTaken.html">Pictures Taken</a></li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="utf-8">
+  <title>What would you like to retrieve in the database</title>
+  <meta name="description" content="Sets up a custom form retrieval page.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/headersfootersdivs.css">
+  <link rel="stylesheet" href="/css/retrieve.css">
+  <link rel="script" href="/js/main.js">
+</head>
 
-    <!--One thing to search for is by name
-    One thing to search for is by clients Greater than a number
-    One thing to search for is under a certain budget-->
+<body>
+  <nav>
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li class="selectedPage"><a href="/pages/conditionalRetrieve.html">Search Photographers - You are here</a></li>
+      <li><a href="/pages/formpage.html">Join the Team</a></li>
+      <li><a href="/pages/picturesTaken.html">Pictures Taken</a></li>
+    </ul>
+  </nav>
 
-    <div class="middlePage">
+  <div class="middlePage">
     <div class="border">
-    <form>
-      <p>In the following you can search our database of photographers. You can include any of the following information before hitting "Search the Table". If no information is provided it will return the entire table.</p>
-      <p class="formP"><label>Name:</label><input id="serName" placeholder="Their Name"></p>
-      <p class="formP"><label>Budget:</label><input type="number" id="serBudget" placeholder="Your Budget"></p><!--We wil be looking to see if the the price of a photographer is equal or less than their budget-->
-      <p class="formP"><label>Number:</label><input type="number" id="serClients" placeholder="Clients they have had"></p><!-- We will be looking to see if they have had this many or more clients -->
+      <form id="formSubmit">
+        <p>In the following you can search our database of photographers. You can include any of the following
+          information before hitting "Search the Table". If no information is provided it will return the entire table.
+          If you search by a budget only, it will provide everyone under your budget. If you search by clients helped it
+          will give you everyone with that number and above.
+        </p>
+        <p class="formP"><label>Name:</label><input id="serName" placeholder="Their Name"></p>
+        <p class="formP"><label>Budget:</label><input type="number" id="serBudget" placeholder="Your Budget"></p>
+        <!--We wil be looking to see if the the price of a photographer is equal or less than their budget-->
+        <p class="formP"><label>Number:</label><input type="number" id="serClients" placeholder="Clients they have had">
+        </p><!-- We will be looking to see if they have had this many or more clients -->
 
-      <button onclick="SearchTable()" type="submit">Search the Table</button>
-    </form>
-    
-    <div class="table">
-    <table>
-      <thead>
-        <tr>
-          <th>Name of Photographer</th>
-          <th>Contact Info</th>
-          <th>Speciality</th>
-          <th>Clients Helped</th>
-          <th>Hourly Rate</th>
-        </tr>
-      </thead>
+        <button type="submit">Search the Table</button>
+      </form>
 
-      <tbody id="SearchTableData">
-        <tr>
-          <td colspan="5">ERROR - No one matches search requirement </td>
-        </tr>
-      </tbody>
-    </table>
+      <div class="table">
+        <table>
+          <thead>
+            <tr>
+              <th>Name of Photographer</th>
+              <th>Contact Info</th>
+              <th>Speciality</th>
+              <th>Clients Helped</th>
+              <th>Hourly Rate</th>
+            </tr>
+          </thead>
+
+          <tbody id="SearchTableData">
+            <tr>
+              <td colspan="5">ERROR - No one matches search requirement </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
-  </div>
-  </div>
+  <script src="/js/main.js"></script>
+</body>
 </html>
